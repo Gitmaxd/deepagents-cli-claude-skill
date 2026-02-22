@@ -1,6 +1,6 @@
 {
   "name": "deepagents-cli-claude-skill",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Deep Agents CLI skill for Claude — works with Claude Code, Claude Desktop, and claude.ai",
   "type": "module",
   "main": "dist/cli.js",
