@@ -12,7 +12,7 @@ If you discover a security vulnerability in this project, please report it respo
 
 **Do not open a public issue.**
 
-Instead, email **gitmaxd@gmail.com** with:
+Instead, email **131803031+Gitmaxd@users.noreply.github.com** with:
 
 - A description of the vulnerability
 - Steps to reproduce
