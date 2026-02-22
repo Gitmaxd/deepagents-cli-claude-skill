@@ -2,14 +2,14 @@
 
 # deepagents-cli-claude-skill
 
-**A Claude Code Skill for the LangChain Deep Agents CLI**
+**A Claude Skill for the LangChain Deep Agents CLI**
 
 [![npm version](https://img.shields.io/npm/v/deepagents-cli-claude-skill.svg)](https://www.npmjs.com/package/deepagents-cli-claude-skill)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js](https://img.shields.io/badge/Node.js-%3E%3D18-green.svg)](https://nodejs.org/)
 [![npm downloads](https://img.shields.io/npm/dm/deepagents-cli-claude-skill.svg)](https://www.npmjs.com/package/deepagents-cli-claude-skill)
 
-Scaffold a production-grade Claude Code Skill that gives Claude comprehensive, structured knowledge of the Deep Agents CLI — commands, providers, memory, sandboxes, streaming, and SDK customization.
+Scaffold a production-grade Claude Skill that gives Claude comprehensive, structured knowledge of the Deep Agents CLI — commands, providers, memory, sandboxes, streaming, and SDK customization. Works with Claude Code, Claude Desktop, and claude.ai.
 
 [Installation](#installation) · [What Gets Installed](#what-gets-installed) · [Skill Resources](#skill-resources) · [Official Documentation](#official-documentation)
 
@@ -21,7 +21,7 @@ Scaffold a production-grade Claude Code Skill that gives Claude comprehensive, s
 
 The Deep Agents CLI is LangChain's terminal coding agent — a LangGraph-powered assistant with persistent memory, 20+ LLM provider integrations, sandboxed code execution, and a composable skills system. Its surface area spans interactive and non-interactive modes, a rich slash-command REPL, programmatic SDK customization, streaming output, and the Agent Client Protocol for editor integration.
 
-This package scaffolds a [Claude Code Skill](https://code.claude.com/docs/en/skills) that encodes that entire surface area as structured, on-demand knowledge. When the skill is active, Claude Code can accurately assist with any Deep Agents CLI task — from launching a first session to building production subagent pipelines — without requiring repeated context or pasted documentation.
+This package scaffolds a [Claude Skill](https://code.claude.com/docs/en/skills) that encodes that entire surface area as structured, on-demand knowledge. When the skill is active, Claude can accurately assist with any Deep Agents CLI task — from launching a first session to building production subagent pipelines — without requiring repeated context or pasted documentation. The skill works across all Claude surfaces: **Claude Code**, **Claude Desktop**, and **claude.ai**.
 
 The skill follows the [Agent Skills open standard](https://agentskills.io/) and loads automatically when relevant. It can also be invoked directly with `/deepagents-cli`.
 
@@ -44,6 +44,17 @@ Installs the skill to `~/.claude/skills/` so it is available across all projects
 ```bash
 npx deepagents-cli-claude-skill init --personal
 ```
+
+### Claude Desktop / claude.ai
+
+If you use the Claude Desktop app or claude.ai (no terminal required):
+
+1. Download `deepagents-cli-skill.zip` from the [latest release](https://github.com/Gitmaxd/deepagents-cli-claude-skill/releases/latest)
+2. Open Claude Desktop or claude.ai
+3. Go to **Settings > Features > Custom Skills**
+4. Upload the zip file
+
+The skill works identically across all Claude surfaces. Requires a Pro, Max, Team, or Enterprise plan with code execution enabled.
 
 ### Options
 
@@ -220,8 +231,9 @@ Agent Skills open standard: https://agentskills.io/specification
 
 ## Requirements
 
-- Node.js >= 18
-- [Claude Code](https://claude.ai/code)
+- **Claude Code install:** Node.js >= 18
+- **Claude Desktop / claude.ai install:** No requirements — just download the zip and upload
+- A [Claude](https://claude.ai/) subscription (Pro, Max, Team, or Enterprise)
 
 ---
 
