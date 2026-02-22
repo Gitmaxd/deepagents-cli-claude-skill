@@ -49,13 +49,13 @@ function printSuccessScreen(copied: number, skipped: number, version: string, ta
   console.log(DIVIDER_THIN);
 
   console.log('\n  WHAT THIS SKILL DOES\n');
-  console.log('  Gives Claude Code comprehensive knowledge of the');
+  console.log('  Gives Claude comprehensive knowledge of the');
   console.log('  Deep Agents CLI — commands, flags, providers, skills, memory,');
   console.log('  sandboxes, streaming, SDK customization, and workflows.\n');
   console.log(DIVIDER_THIN);
 
   console.log('\n  USAGE\n');
-  console.log('  Claude Code loads this skill automatically when relevant.');
+  console.log('  Claude loads this skill automatically when relevant.');
   console.log('  You can also invoke it directly: /deepagents-cli\n');
   console.log(DIVIDER_THIN);
 
@@ -69,7 +69,7 @@ function printSuccessScreen(copied: number, skipped: number, version: string, ta
 const init = defineCommand({
   meta: {
     name: 'init',
-    description: 'Install the Deep Agents CLI skill for Claude Code',
+    description: 'Install the Deep Agents CLI skill for Claude',
   },
   args: {
     force: {
@@ -154,7 +154,7 @@ const main = defineCommand({
   meta: {
     name: 'deepagents-cli-claude-skill',
     version: '0.1.0',
-    description: 'Deep Agents CLI skill for Claude Code',
+    description: 'Deep Agents CLI skill for Claude',
   },
   subCommands: {
     init,

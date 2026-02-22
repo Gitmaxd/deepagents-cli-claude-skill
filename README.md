@@ -89,7 +89,7 @@ To update the skill after a new release, re-run the init command. Existing files
     └── workflows.md                Automation patterns, CI/CD, troubleshooting
 ```
 
-The skill follows the [Agent Skills progressive disclosure model](https://agentskills.io/specification#progressive-disclosure): `SKILL.md` is the primary context loaded by Claude Code, and the reference files are surfaced on-demand as the task requires them. This keeps the token footprint minimal while making the full surface area available.
+The skill follows the [Agent Skills progressive disclosure model](https://agentskills.io/specification#progressive-disclosure): `SKILL.md` is the primary context loaded by Claude, and the reference files are surfaced on-demand as the task requires them. This keeps the token footprint minimal while making the full surface area available.
 
 ---
 
@@ -101,7 +101,7 @@ Each reference file is a structured knowledge document scoped to a specific area
 
 **Purpose:** Entry point for the skill. Contains a concise overview, quick-start examples, core concept summaries, and links to all reference files.
 
-**Value:** Claude Code reads this file first when the skill is activated. It provides enough context to handle the most common tasks immediately and directs Claude to the appropriate reference file for deeper questions, keeping initial token usage minimal.
+**Value:** Claude reads this file first when the skill is activated. It provides enough context to handle the most common tasks immediately and directs Claude to the appropriate reference file for deeper questions, keeping initial token usage minimal.
 
 ---
 
@@ -185,9 +185,9 @@ Practical reference for automation and scripted usage. Covers non-interactive mo
 
 ---
 
-## Claude Code Skill Compliance
+## Agent Skills Compliance
 
-This skill is built to the [Claude Code Skill specification](https://code.claude.com/docs/en/skills) and the [Agent Skills open standard](https://agentskills.io/specification):
+This skill is built to the [Agent Skills open standard](https://agentskills.io/specification) and the [Claude Code Skill specification](https://code.claude.com/docs/en/skills):
 
 | Requirement | Implementation |
 |-------------|----------------|
@@ -195,7 +195,7 @@ This skill is built to the [Claude Code Skill specification](https://code.claude
 | Narrow, outcome-focused scope | Skill scoped entirely to Deep Agents CLI knowledge; single domain, single responsibility |
 | Co-located supporting files | `references/` directory co-located with `SKILL.md` inside the skill directory |
 | Progressive disclosure | `SKILL.md` is the primary context under 500 lines; reference files are loaded on-demand by topic |
-| Flexible invocation | Claude Code loads the skill automatically when relevant; user can also invoke with `/deepagents-cli` |
+| Flexible invocation | Claude loads the skill automatically when relevant; user can also invoke with `/deepagents-cli` |
 | Personal and workspace scopes | `--personal` targets `~/.claude/skills/`; default targets `<project>/.claude/skills/` |
 | Never overwrites existing files | The installer skips any file that already exists at the target path |
 
